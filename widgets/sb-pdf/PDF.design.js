@@ -77,7 +77,7 @@
       ],
 
 	  dependencies: {
-         files: ['PDF/**']
+         files: ['sb-pdf/**']
     },
 
     runtimeTemplate: function (props) {
