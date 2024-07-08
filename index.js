@@ -1,6 +1,6 @@
 // PDF Viewer Extension for Vuforia Studio by Simon Bruegel
 // Based on Mozilla PDF.js
-// Version 0.6
+// Version 0.7
 
 /*Fixed 0.3:
 tml-widget bug (Black intial screen in preview) causes of PDF.css
@@ -18,6 +18,9 @@ roll to new release of PDF.js and be independent of Studio release cycle
 
 *Fixed 0.6
 Remote resources coming from Thingworx repositories
+
+*Fixed in 0.7
+Fix for Studio 9.20 (Lit Support Design Time)
 
 Known issues:
 only a very few remote data works because they don't get trusted because of a compound src (CORS)

@@ -2,7 +2,7 @@
 (function() {
   function PDF() {
     return {
-      elementTag: 'PDF',
+      elementTag: 'sb-pdf',
 
       label: 'PDF',
 
@@ -85,7 +85,7 @@
                      '<iframe ng-src="{{(\'extensions/PDF/viewer.html?file=\' + ((me.src.startsWith(\'http\') || me.src.startsWith(\'/Thingworx\')) ? (me.src | trustUrl) : \'../../\' + me.src) + (me.currentPage != \'\' ? \'#page=\' + me.currentPage : \'\' ) + (me.initalZoom != \'\' ? \'&zoom=\' + me.initalZoom : \'\' ) | trustUrl)}}" style="width:100%; min-height: 100%; height:100%;" frameborder="0"></iframe>' +
                      '</div>';
         return tmpl;
-    }
+    },
 
       // List of events that will displayed in the widget properties panel
 
@@ -95,6 +95,12 @@
        * @param {*} fullOriginalDoc entire view element, with all widgets
        * @param {*} $ Cheerio/jquery helper instance
        */
+      designTemplate: function (data, html) {
+        return html`<div class="pdf-placeholder ${this.me.class}" style="width: calc(${this.me.width} - 16px); height: calc(${this.me.height} - 16px);">
+          <p class="pdf-placeholder-text">${this.me.src ? this.me.src.substr(this.me.src.lastIndexOf("/") + 1, this.me.src.lastIndex) : "select a file"}</p>
+        </div>`;
+      },
+
 
     };
   }
