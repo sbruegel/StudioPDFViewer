@@ -82,7 +82,7 @@
 
     runtimeTemplate: function (props) {
         var tmpl = '<div twx-visible style="position:relative; width:{{me.width}}; height:{{me.height}}; overflow:hidden;">' +
-                     '<iframe ng-src="{{(\'extensions/PDF/viewer.html?file=\' + ((me.src.startsWith(\'http\') || me.src.startsWith(\'/Thingworx\')) ? (me.src | trustUrl) : \'../../\' + me.src) + (me.currentPage != \'\' ? \'#page=\' + me.currentPage : \'\' ) + (me.initalZoom != \'\' ? \'&zoom=\' + me.initalZoom : \'\' ) | trustUrl)}}" style="width:100%; min-height: 100%; height:100%;" frameborder="0"></iframe>' +
+                     '<iframe ng-src="{{(\'extensions/sb-pdf/viewer.html?file=\' + ((me.src.startsWith(\'http\') || me.src.startsWith(\'/Thingworx\')) ? (me.src | trustUrl) : \'../../\' + me.src) + (me.currentPage != \'\' ? \'#page=\' + me.currentPage : \'\' ) + (me.initalZoom != \'\' ? \'&zoom=\' + me.initalZoom : \'\' ) | trustUrl)}}" style="width:100%; min-height: 100%; height:100%;" frameborder="0"></iframe>' +
                      '</div>';
         return tmpl;
     },
