@@ -36,12 +36,12 @@ exports = module.exports = function(common) {
 	projectExports.runtimeLibraries = function() {
 		//, path.resolve(common.NODE_MODULE_DIR, "ves-ar-extension", "widgets", "twx-mobile-widgets-3d", "ide", "js", "ptc", "thingview", "pdfjs", "*")
 	    var libs = [
-				{files: [path.resolve(__dirname, 'runtime', 'PDF', '*')], dest: 'PDF'},
-				{files: [path.resolve(__dirname, 'runtime', 'PDF', 'js', '*')], dest: 'PDF/js'},
+				{files: [path.resolve(__dirname, 'runtime', 'sb-pdf', '*')], dest: 'sb-pdf'},
+				{files: [path.resolve(__dirname, 'runtime', 'sb-pdf', 'js', '*')], dest: 'sb-pdf/js'},
 				//{files: [path.resolve(__dirname, 'runtime', 'PDF', 'css', '*')], dest: 'PDF/css'},
-				{files: [path.resolve(__dirname, 'runtime', 'PDF', 'images', '*')], dest: 'PDF/images'},
-				{files: [path.resolve(__dirname, 'runtime', 'PDF', 'cmaps', '*')], dest: 'PDF/cmaps'},
-				{files: [path.resolve(__dirname, 'runtime', 'PDF', 'locale', '**', '*')], dest: 'PDF/locale/**'}
+				{files: [path.resolve(__dirname, 'runtime', 'sb-pdf', 'images', '*')], dest: 'sb-pdf/images'},
+				{files: [path.resolve(__dirname, 'runtime', 'sb-pdf', 'cmaps', '*')], dest: 'sb-pdf/cmaps'},
+				{files: [path.resolve(__dirname, 'runtime', 'sb-pdf', 'locale', '**', '*')], dest: 'sb-pdf/locale/**'}
 			];
 			return libs;
 	};
